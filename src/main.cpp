@@ -1,18 +1,18 @@
 #include <Arduino.h>
+#include "lab_1/lab_1.h"
 
-// put function declarations here:
-int myFunction(int, int);
+#define LAB_1
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+void setup()
+{
+#ifdef LAB_1
+  lab_1_init();
+#endif
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void loop()
+{
+#ifdef LAB_1
+  lab_1_run();
+#endif
 }
